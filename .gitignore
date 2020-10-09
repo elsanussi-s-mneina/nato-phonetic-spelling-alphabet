@@ -10,3 +10,4 @@
 /.spago
 /.vscode/
 /index.js
+.DS_Store

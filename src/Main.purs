@@ -46,4 +46,7 @@ spell aString = unwords (map spellLetter (toCharArray aString))
 
 main :: Effect Unit
 main = do
-  log "Hello world"
+  log "Welcome to the NATO Spelling alphabet application"
+  log "Loading Javascript sources succeed"
+  log "This program was created by Elsanussi Mneina in October 2020."
+
