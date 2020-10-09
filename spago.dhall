@@ -11,6 +11,7 @@ You can edit this file as you like.
   , "psci-support"
   , "quickcheck"
   , "spec"
+  , "spec-quickcheck"
   , "strings"
   ]
 , packages = ./packages.dhall

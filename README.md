@@ -22,3 +22,5 @@ It should provide the interaction for a button in the HTML file "index.html".
 `spago install quickcheck`
 
 `spago install spec`
+
+`spago install spec-quickcheck`

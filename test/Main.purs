@@ -2,15 +2,23 @@ module Test.Main where
 
 import Prelude
 
+import Data.String (toLower)
+
 import Test.Spec (describe, it)
 import Test.Spec.Assertions (shouldEqual)
 import Test.Spec.Reporter.Console (consoleReporter)
 import Test.Spec.Runner (runSpec)
 
+
+import Test.QuickCheck ((===), (/==))
+import Test.Spec.QuickCheck (quickCheck)
+
 import Effect (Effect)
 import Effect.Aff (launchAff_)
 
 import Main (spell, spellLetter)
+
+
 
 -- See https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
 main :: Effect Unit
@@ -45,3 +53,7 @@ main = launchAff_ $ runSpec [consoleReporter] do
     it "x" (spellLetter 'x' `shouldEqual` "X-ray")
     it "y" (spellLetter 'y' `shouldEqual` "Yankee")
     it "z" (spellLetter 'z' `shouldEqual` "Zulu")
+  describe "lowercase and uppercase treated equally" do
+    it "full alphabet" (spell "abcdefghijklmnopqrstuvwxyz" `shouldEqual` spell "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    it "works same on any lowercased string" 
+      (quickCheck \aString -> spell aString === spell (toLower aString))
