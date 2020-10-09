@@ -3,7 +3,7 @@ module LatinSpellingAlphabet where
 import Prelude
 
 import Data.String (joinWith)
-import Data.String.CodeUnits (toCharArray)
+import Data.String.CodeUnits (singleton, toCharArray)
 
 spellLetter :: Char -> String
 spellLetter ch = 
@@ -60,7 +60,7 @@ spellLetter ch =
     'Y' -> "Yankee"
     'z' -> "Zulu"
     'Z' -> "Zulu"
-    _   -> "(n/a)"
+    otherCharacter -> singleton otherCharacter
 
 unwords :: Array String -> String
 unwords = joinWith " "

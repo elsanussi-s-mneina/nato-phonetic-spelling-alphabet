@@ -55,5 +55,8 @@ main = launchAff_ $ runSpec [consoleReporter] do
     it "z" (spellLetter 'z' `shouldEqual` "Zulu")
   describe "lowercase and uppercase treated equally" do
     it "full alphabet" (spell "abcdefghijklmnopqrstuvwxyz" `shouldEqual` spell "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    it "works same on any lowercased string" 
-      (quickCheck \aString -> spell aString === spell (toLower aString))
+  describe "non-letters" do 
+    it "does not change a space" (spellLetter ' ' `shouldEqual` " ")
+    it "does not change a new line" (spellLetter '\n' `shouldEqual` "\n")
+    it "does not change a carriage return" (spellLetter '\r' `shouldEqual` "\r")
+    it "does not change a tab" (spellLetter '\t' `shouldEqual` "\t")
