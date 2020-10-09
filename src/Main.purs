@@ -4,6 +4,10 @@ import Prelude
 
 import Effect (Effect)
 import Effect.Console (log)
+import LatinSpellingAlphabet as LatinSpellingAlphabet
+
+spell :: String -> String
+spell = LatinSpellingAlphabet.spell
 
 main :: Effect Unit
 main = do
