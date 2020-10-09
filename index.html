@@ -3,6 +3,9 @@
     <title>Hello Javascript Console - via Purescript</title>
     <script type="text/javascript" src="index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <button onclick="document.getElementById('output').value = PS['Main'].spell('hello'); ">spell out</button>
+    <textarea id='output'></textarea>
+  </body>
 </html>
 
