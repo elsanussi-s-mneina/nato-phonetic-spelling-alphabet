@@ -10,13 +10,13 @@ import Test.Spec.Reporter.Console (consoleReporter)
 import Test.Spec.Runner (runSpec)
 
 
-import Test.QuickCheck ((===), (/==))
+import Test.QuickCheck ((===))
 import Test.Spec.QuickCheck (quickCheck)
 
 import Effect (Effect)
 import Effect.Aff (launchAff_)
 
-import Main (spell, spellLetter)
+import LatinSpellingAlphabet (spell, spellLetter)
 
 
 
