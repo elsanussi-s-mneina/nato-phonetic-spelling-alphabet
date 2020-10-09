@@ -2,16 +2,11 @@ module Test.Main where
 
 import Prelude
 
-import Data.String (toLower)
-
 import Test.Spec (describe, it)
 import Test.Spec.Assertions (shouldEqual)
 import Test.Spec.Reporter.Console (consoleReporter)
 import Test.Spec.Runner (runSpec)
 
-
-import Test.QuickCheck ((===))
-import Test.Spec.QuickCheck (quickCheck)
 
 import Effect (Effect)
 import Effect.Aff (launchAff_)
