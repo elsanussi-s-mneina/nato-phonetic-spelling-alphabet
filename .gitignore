@@ -9,5 +9,7 @@
 /.psa*
 /.spago
 /.vscode/
+# Ignore generated Javascript file:
 /index.js
+# Ignore Mac OS specific file
 .DS_Store
