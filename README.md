@@ -13,6 +13,14 @@ You should now have a Javascript file in the current directory.
 Now open index.html.
 It should provide the interaction for a button in the HTML file "index.html".
 
+# How to run the unit tests
+Enter the following command in the terminal:
+```
+$ spago test
+```
+
+A summary of which tests passed should appear.
+
 # How this project was created
 
 `spago init`
