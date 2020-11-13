@@ -9,36 +9,46 @@
     h1
     {
       font-family: didot, serif;
-      font-size: large;
+      font-size: larger;
     }
     h2
     {
       margin-top: 30px;
       margin-bottom: 2px;
       font-family: didot, serif;
-      font-size: small;
+      font-size: large;
     }
     textarea
     {
       margin-left: 1em;
+      font-family: times, serif;
+      font-size: medium;
     }
     button
     {
       margin-left: 3em;
+      font-family: didot, serif;
+      font-size: medium;
+    }
+    #output
+    {
+      background-color: rgb(230, 230, 230);
+      # We gray out the output box to indicate that 
+      # the user cannot edit it.
     }
     </style>
   </head>
   <body>
     <h1>NATO Spelling Alphabet</h1>
-    <h2>Input Text</h2>
+    <label for="input"><h2>Input Text</h2></label>
     <textarea id='input' rows="4" cols="30"></textarea>
     <h2>Action</h2>
     <button onclick="document.getElementById('output').value = PS['Main'].spell(document.getElementById('input').value); ">Spell out each letter of text</button>
-    <h2>Result</h2>
-    <textarea id='output' rows="4" cols="30"></textarea>
+    <label for="output"><h2>Result</h2></label>
+    <textarea readonly id='output' rows="4" cols="30"></textarea>
 
     <footer>
-      <p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/nato-phonetic-spelling-alphabet">v1.1, (2020-11-12). Made by Elsanussi Mneina</a></p>
+      <p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/nato-phonetic-spelling-alphabet">v1.2, (2020-11-12). Made by Elsanussi Mneina</a></p>
     </footer>  
   </body>
 </html>
